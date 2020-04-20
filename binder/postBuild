@@ -1,0 +1,19 @@
+#!/bin/bash
+
+VERSION="neo4j-community-4.0.3"
+
+if [ ! -f $VERSION-unix.tar.gz ]; then
+  wget http://dist.neo4j.org/$VERSION-unix.tar.gz
+fi
+
+tar -xvf $VERSION-unix.tar.gz
+mv $VERSION ${CONDA_DIR}/
+rm $VERSION-unix.tar.gz
+
+# set password 
+${CONDA_DIR}/$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
+
+export NEO4J_HOME=${CONDA_DIR}/$VERSION
+
+# install jupyter lab extension
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-cytoscape
