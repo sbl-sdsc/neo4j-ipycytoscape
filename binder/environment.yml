@@ -6,15 +6,8 @@ channels:
 
 dependencies:
   - python>=3.8
-  - jupyter
-  - jupyterlab
   - pandas
-  - matplotlib
-  - plotly
-  - biopython
   - py2neo=4.2.0
-  - jupyter_nbextensions_configurator
-  - nodejs
   - pip
   - pip:
     - ipycytoscape==0.2.0 
