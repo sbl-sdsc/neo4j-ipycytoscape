@@ -8,6 +8,4 @@ dependencies:
   - python>=3.8
   - pandas
   - py2neo=4.2.0
-  - pip
-  - pip:
-    - ipycytoscape==0.2.0 
+  - ipycytoscape=0.2.1 
