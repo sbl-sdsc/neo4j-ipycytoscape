@@ -10,4 +10,4 @@ dependencies:
   - py2neo=4.2.0
   - pip
   - pip:
-    - ipycytoscape==0.2.0 
+    - ipycytoscape==0.2.2 
