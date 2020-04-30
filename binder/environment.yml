@@ -1,11 +1,13 @@
 name: neo4j-ipycytoscape 
 
 channels:
-  - anaconda
   - conda-forge
+  - anaconda
 
 dependencies:
   - python>=3.8
   - pandas
   - py2neo=4.2.0
+  - nodejs
+  - jupyterlab=2.1.1
   - ipycytoscape==0.2.2 
