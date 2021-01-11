@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="neo4j-community-4.0.3"
+VERSION="neo4j-community-4.2.3"
 
 if [ ! -f $VERSION-unix.tar.gz ]; then
   wget http://dist.neo4j.org/$VERSION-unix.tar.gz
