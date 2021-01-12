@@ -7,7 +7,9 @@ channels:
 dependencies:
   - python>=3.8
   - pandas
-  - py2neo=4.2.0
   - nodejs
-  - jupyterlab=2.1.1
-  - ipycytoscape==0.2.2 
+  - jupyterlab
+  - pip
+  - pip:
+    - py2neo
+    - git+https://github.com/pwrose/ipycytoscape.git 
