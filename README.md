@@ -1,6 +1,2 @@
-### Launch in Jupyter Notebook
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pwrose/neo4j-ipycytoscape/master)
-
-### Launch in Jupyter Lab
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pwrose/neo4j-ipycytoscape/master?urlpath=lab)
+### Launch in Jupyter Lab on [Pangeo Binder](https://binder.pangeo.io/)
+[![Binder](https://binder.pangeo.io/v2/gh/pwrose/neo4j-ipycytoscape/master?urlpath=lab)
