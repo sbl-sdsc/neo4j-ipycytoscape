@@ -6,9 +6,9 @@ channels:
 
 dependencies:
   - python>=3.8
-  - pandas
   - nodejs
   - jupyterlab=3
+  - pandas
   - pip
   - pip:
     - py2neo
