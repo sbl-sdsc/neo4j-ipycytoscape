@@ -2,7 +2,7 @@
 
 This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in JupyterLab and the Jupyter notebook.
 
-### Launch in Jupyter Lab on [Pangeo Binder](https://binder.pangeo.io/)
+### Launch Jupyter Lab on [Pangeo Binder](https://binder.pangeo.io/)
 
 [![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/pwrose/neo4j-ipycytoscape/master)
 
@@ -14,7 +14,7 @@ This repo demonstrates how to use the [ipycytoscape widget](https://github.com/Q
 When running this project on [Pangeo Binder](https://binder.pangeo.io/), a Neo4j database server is [setup](../binder/postBuild) and [started](../binder/start). This may take a few minutes.
 
 #### Local Neo4j installation
-When running this notebook locally, you need to install and start the Neo4j database:
+When running Neo4j_Example1.ipynb locally, you need to install and start the Neo4j database:
 
 1. [Download Neo4j](https://neo4j.com/download/)
 2. Launch Neo4j Browser
