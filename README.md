@@ -4,7 +4,7 @@ This repo demonstrates how to use the [ipycytoscape widget](https://github.com/Q
 
 ### Launch Jupyter Lab on [Pangeo Binder](https://binder.pangeo.io/)
 
-[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/pwrose/neo4j-ipycytoscape/master)
+[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/sbl-sdsc/neo4j-ipycytoscape/master)
 
 |Notebook|Description|
 |:-------|:----------|
