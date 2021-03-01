@@ -16,4 +16,4 @@ ${CONDA_DIR}/$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
 export NEO4J_HOME=${CONDA_DIR}/$VERSION
 
 # install jupyter lab extension
-#jupyter labextension install @jupyter-widgets/jupyterlab-manager 
+jupyter labextension install @jupyter-widgets/jupyterlab-manager 
