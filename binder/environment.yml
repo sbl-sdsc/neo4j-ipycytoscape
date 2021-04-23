@@ -12,4 +12,4 @@ dependencies:
   - pip
   - pip:
     - py2neo
-    - git+https://github.com/pwrose/ipycytoscape.git 
+    - git+https://github.com/QuantStack/ipycytoscape.git 
