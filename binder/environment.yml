@@ -10,3 +10,4 @@ dependencies:
   - pandas
   - ipycytoscape
   - py2neo
+  - monotonic
