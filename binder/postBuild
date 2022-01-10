@@ -7,13 +7,10 @@ if [ ! -f $VERSION-unix.tar.gz ]; then
 fi
 
 tar -xvf $VERSION-unix.tar.gz
-mv $VERSION ${CONDA_DIR}/
+mv $VERSION /tmp 
 rm $VERSION-unix.tar.gz
 
 # set password 
-${CONDA_DIR}/$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
+/tmp/$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
 
-export NEO4J_HOME=${CONDA_DIR}/$VERSION
-
-# install jupyter lab extension
-jupyter labextension install @jupyter-widgets/jupyterlab-manager 
+export NEO4J_HOME=/tmp/$VERSION
