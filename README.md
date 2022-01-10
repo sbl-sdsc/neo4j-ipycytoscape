@@ -2,16 +2,18 @@
 
 This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in JupyterLab and the Jupyter notebook.
 
-### Launch Jupyter Lab on [Pangeo Binder](https://binder.pangeo.io/)
+### Launch Jupyter Lab on [Pangeo Binder](https://aws-uswest2-binder.pangeo.ia/)
 
-[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/sbl-sdsc/neo4j-ipycytoscape/master)
+**NOTE:** Authentication is now required to launch binder! Sign into GitHub from your browser, then click on the `launch binder` badge below to launch Jupyter Lab.
+
+[![Binder](https://aws-uswest2-binder.pangeo.ia/badge_logo.svg)](https://aws-uswest2-binder.pangeo.ia/v2/gh/sbl-sdsc/neo4j-ipycytoscape/master)
 
 |Notebook|Description|
 |:-------|:----------|
 |[Neo4j_Example1](notebooks/Neo4j_Example1.ipynb)| Creates a small Neo4j graph locally and demonstrates how to display a Neo4j subgraph|
 |[Neo4j_Example2](notebooks/Neo4j_Example2.ipynb)| Accesses the  COVID-19-Net Knowledge Graph server and demonstrates how to display a Neo4j subgraph|
 
-When running this project on [Pangeo Binder](https://binder.pangeo.io/), a Neo4j database server is [setup](../binder/postBuild) and [started](../binder/start). This may take a few minutes.
+When running this project on [Pangeo Binder](https://aws-uswest2-binder.pangeo.ia/), a Neo4j database server is [setup](../binder/postBuild) and [started](../binder/start). This may take a few minutes.
 
 #### Local Neo4j installation
 When running Neo4j_Example1.ipynb locally, you need to install and start the Neo4j database:
