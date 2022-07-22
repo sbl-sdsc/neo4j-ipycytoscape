@@ -11,3 +11,4 @@ dependencies:
   - ipycytoscape
   - py2neo
   - monotonic
+  - openjdk>=11.0.15
