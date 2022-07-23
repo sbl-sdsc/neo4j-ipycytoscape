@@ -101,4 +101,4 @@ spark-warehouse
 ./test.py
 
 # Neo4j
-import.report
+notebooks/neo4j-community*
