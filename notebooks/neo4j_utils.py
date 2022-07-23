@@ -22,31 +22,26 @@ def untar(filename):
     tar.close()
     
 def unzip(filename):
-    zipf = zipfile.open(filename)
-    zipf.extractall()
-    zipf.close()
+    with zipfile.ZipFile(filename,"r") as zip_ref:
+        zip_ref.extractall()
 
 def download_neo4j(version, password):
-    my_os = platform.system()
-    if my_os == "Windows":
-        url = f"https://dist.neo4j.org/{version}-windows.zip"
-        filename = f"{version}-windows.zip"
-    else:
-        url = f"https://dist.neo4j.org/{version}-unix.tar.gz"
-        filename = f"{version}-unix.tar.gz"
-        
-    neo4j_admin = os.path.join(version, "bin", "neo4j-admin")
-
     if not os.path.isdir(version):
-        download_http(url, filename)
-        if my_os == "Windows":
+        if platform.system() == "Windows":
+            url = f"https://dist.neo4j.org/{version}-windows.zip"
+            filename = f"{version}-windows.zip"
+            download_http(url, filename)
             unzip(filename)
         else:
+            url = f"https://dist.neo4j.org/{version}-unix.tar.gz"
+            filename = f"{version}-unix.tar.gz"
+            download_http(url, filename)
             untar(filename)
         
         if os.path.exists(filename):
             os.remove(filename)
 
+        neo4j_admin = os.path.join(version, "bin", "neo4j-admin")
         subprocess.run([neo4j_admin, "set-initial-password", password])
     
 def start():
@@ -60,10 +55,6 @@ def start():
     subprocess.run([neo4j, "start"])
 
     time.sleep(30)
-    # print("Status:", status())
-    # while not status():
-    #     print("waiting for server to start ...", status())
-    #     time.sleep(15)
     
 def stop():
     version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
