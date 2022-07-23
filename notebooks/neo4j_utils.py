@@ -34,8 +34,8 @@ def download_neo4j(version, password):
         subprocess.run([neo4j_admin, "set-initial-password", password])
     
 def start():
-    version = os.getenv("NEO4J_VERSION")
-    password = os.getenv("NEO4J_PASSWORD")
+    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
+    password = os.getenv("NEO4J_PASSWORD", default="demo")
     
     if not os.path.isdir(version):
         download_neo4j(version, password)
@@ -50,12 +50,12 @@ def start():
     #     time.sleep(15)
     
 def stop():
-    version = os.getenv("NEO4J_VERSION")
+    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
     neo4j = os.path.join(version, "bin", "neo4j")
     subprocess.run([neo4j, "stop"]) 
     
 def status():
-    version = os.getenv("NEO4J_VERSION")
+    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
     neo4j = os.path.join(version, "bin", "neo4j")
     status = subprocess.run([neo4j, "status"])
     print(status)
