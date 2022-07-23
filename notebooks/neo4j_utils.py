@@ -8,6 +8,8 @@ import time
 import requests
 import gzip
 import tarfile
+import zipfile
+import platform
 
 def download_http(url, filename):
     with requests.get(url, stream=True) as r:
@@ -18,15 +20,29 @@ def untar(filename):
     tar = tarfile.open(filename)
     tar.extractall()
     tar.close()
+    
+def unzip(filename):
+    zipf = zipfile.open(filename)
+    zipf.extractall()
+    zipf.close()
 
 def download_neo4j(version, password):
-    url = f"https://dist.neo4j.org/{version}-unix.tar.gz"
-    filename = f"{version}-unix.tar.gz"
+    my_os = platform.system()
+    if my_os == "Windows":
+        url = f"https://dist.neo4j.org/{version}-windows.zip"
+        filename = f"{version}-windows.zip"
+    else:
+        url = f"https://dist.neo4j.org/{version}-unix.tar.gz"
+        filename = f"{version}-unix.tar.gz"
+        
     neo4j_admin = os.path.join(version, "bin", "neo4j-admin")
 
     if not os.path.isdir(version):
         download_http(url, filename)
-        untar(filename)
+        if my_os == "Windows":
+            unzip(filename)
+        else:
+            untar(filename)
         
         if os.path.exists(filename):
             os.remove(filename)
