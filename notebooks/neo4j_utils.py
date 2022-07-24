@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 import os
 import subprocess
 import shutil
-import time
 import requests
-from urllib.error import HTTPError
 import gzip
 import tarfile
 import zipfile
@@ -21,10 +18,6 @@ def download_http(url, filename):
 def untar(filename):
     with tarfile.open(filename) as tf:
         tf.extractall()
-
-    # tar = tarfile.open(filename)
-    # tar.extractall()
-    # tar.close()
     
 def unzip(filename):
     with zipfile.ZipFile(filename,"r") as zf:
@@ -72,8 +65,6 @@ def start():
     subprocess.run([neo4j, "start"])
     
     check_status()
-
-    #time.sleep(30)
     
 def stop():
     version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
@@ -89,7 +80,7 @@ def check_status():
     # adopted from: https://github.com/neo-technology/neokit/blob/master/neorun.py
     success = False
     start_time = time.time()
-    timeout = 60 * 4 # in seconds
+    timeout = 60 * 4
     count = 0
 
     print("Launching server", end="")
@@ -113,8 +104,3 @@ def check_status():
         
     print(" running.")
     return 0
-            
-        
-        
-
-    
