@@ -55,6 +55,7 @@ def download_neo4j():
         subprocess.run([neo4j_admin, "set-initial-password", password])
         
         if platform.system() == "Windows":
+            neo4j = os.path.join(version, "bin", "neo4j.bat")
             subprocess.run([neo4j, "install-service"])
     
 def start():
