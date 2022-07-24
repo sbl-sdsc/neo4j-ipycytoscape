@@ -11,3 +11,8 @@ dependencies:
   - ipycytoscape
   - py2neo
   - monotonic
+  - openjdk>=11.0.15
+
+variables:
+  NEO4J_VERSION: neo4j-community-4.4.9
+  NEO4J_PASSWORD: demo

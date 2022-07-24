@@ -1,0 +1,17 @@
+#!/bin/bash
+
+VERSION="neo4j-community-4.4.9"
+
+if [ ! -f $VERSION-unix.tar.gz ]; then
+  wget https://dist.neo4j.org/$VERSION-unix.tar.gz
+fi
+
+tar -xvf $VERSION-unix.tar.gz
+#mv $VERSION /tmp 
+rm $VERSION-unix.tar.gz
+
+# set password 
+#/tmp/$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
+$VERSION/bin/neo4j-admin set-initial-password neo4jbinder
+
+export NEO4J_HOME=$(pwd)/$VERSION
