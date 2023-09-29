@@ -5,7 +5,7 @@ channels:
   - anaconda
 
 dependencies:
-  - python>=3.8
+  - python=3.10
   - jupyterlab=4
   - pandas
   - ipycytoscape
@@ -14,5 +14,10 @@ dependencies:
   - openjdk=17.0.8
 
 variables:
+  # Neo4j local version
   NEO4J_VERSION: neo4j-community-5.12.0
   NEO4J_PASSWORD: neo4jdemo
+  # Connection information for COVID-19 Community Neo4j KG server (https://github.com/covid-19-net/covid-19-community)
+  DEMO_SERVER_URL: bolt://132.249.238.185:7687
+  DEMO_SERVER_UN: reader
+  DEMO_SERVER_PW: demo

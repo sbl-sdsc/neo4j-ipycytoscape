@@ -2,6 +2,13 @@
 
 This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in Jupyter Lab. It also demonstrated how to setup a local instance of the Neo4j graph database.
 
+Example subgraph rendered in Jupyter Notebook.
+<p align="center">
+<img src="docs/Example1.png">
+</p>
+
+Colors and styles of nodes and relationships can be changed. By clicking on a node, a tooltip with the node properties is displayed. The layout can also be manually changed by dragging nodes to new positions. 
+
 |Notebook|Description|
 |:-------|:----------|
 |[Neo4j_Example1](notebooks/Neo4j_Example1.ipynb)| Creates a small Neo4j graph locally and demonstrates how to display a Neo4j subgraph|
@@ -11,7 +18,7 @@ This repo demonstrates how to use the [ipycytoscape widget](https://github.com/Q
 Follow the steps below to setup and run the example notebooks on Mac, Linux, or Windows.
 
 ------
-Prerequisites: Miniconda3 (light-weight, preferred) or Anaconda3 and Mamba
+Prerequisites: Miniconda3 (light-weight, preferred) or Anaconda3 and Mamba (faster than Conda)
 
 * Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html)
 * Update an existing miniconda3 installation: ```conda update conda```
@@ -108,7 +115,7 @@ galyleo launch --account <account_number> --partition shared --cpus 1 --memory 8
 Peter W. Rose, David Valentine, Ilya Zaslavsky, COVID-19-Net: Integrating Health, Pathogen and Environmental Data into a Knowledge Graph for Case Tracking, Analysis, and Forecasting. Available online: https://github.com/covid-19-net/covid-19-community (2020).
 
 ## Funding
-The Neo4j graph visualization for ipycytoscape is in part supported by the National Science Foundation under Award Numbers:
+The Neo4j graph visualization for ipycytoscape was in part supported by the National Science Foundation under Award Numbers:
 
 **NSF Convergence Accelerator Phase I (RAISE):** Knowledge Open Network Queries for Research (KONQUER) ([1937136](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1937136))
 
