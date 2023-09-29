@@ -1,6 +1,6 @@
 # neo4j-ipycytoscape
 
-This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in Jupyter Lab.
+This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in Jupyter Lab. It also demonstrated how to setup a local instance of the Neo4j graph database.
 
 |Notebook|Description|
 |:-------|:----------|
@@ -60,7 +60,7 @@ conda deactivate
 
 ## Run Jupyter Lab on SDSC Expanse
 
-[Expanse](https://www.sdsc.edu/support/user_guides/expanse.html) is an National Science Foundation (NSF)-funded supercomputer at the [San Diego Supercomputer Center](https://www.sdsc.edu/) at UC San Diego. Free allocations on Expanse can be obtained through the [ACCESS progam](https://allocations.access-ci.org/prepare-requests-overview) or contact consult@sdsc.edu for a trial account.
+[Expanse](https://www.sdsc.edu/support/user_guides/expanse.html) is an National Science Foundation (NSF)-funded supercomputer at the [San Diego Supercomputer Center](https://www.sdsc.edu/) at UC San Diego. Free allocations are available for academic researchers. A trial allocation can be obtained by contacting consult@sdsc.edu or a full allocation by applying through the [ACCESS progam](https://allocations.access-ci.org/prepare-requests-overview).
 
 
 1. Log into the [Expanse Portal](https://portal.expanse.sdsc.edu/) with your ACCESS credentials.
@@ -79,25 +79,25 @@ cd neo4j-ipycytoscape
 
 5. Launch Jupyter Lab using the Galyleo
 
-> Before you use Galyleo the first time, append ```export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"``` to your ```.bashrc``` on Expanse and run ```source ./.bashrc```.
-
     Fill in the your project account number in the command below. Galyleo will generate a URL for your Jupyter Lab session and create a Conda environment specified by the environment.yml file.
     
 ```
 galyleo launch --account <account_number> --partition shared --cpus 1 --memory 8 --time-limit 00:30:00 --conda-env neo4j-ipycytoscape --conda-yml environment.yml --mamba
 ```
 
-6. Open a new tab in your web browser and paste the Jupyter Lab URL.
+> Note, before you use Galyleo the first time, append ```export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"``` to the ```.bashrc``` file in your home directory then and run ```source ./.bashrc```.
 
-> You should see the Satellite Reserver Proxy Servive page launch in your browser.
+6. Open a new tab in your web browser and paste the Jupyter Lab URL.
 
     Wait until Jupyter Lab launches. This may take several minutes.
 
-7. Run the example notebooks
+> You should see the Satellite Reserver Proxy Servive page launch in your browser.
+
+8. Run the example notebooks
 
     Navigate to the [`notebooks`](notebooks) directory to run the example Jupyter Notebooks.
    
-8. Shutdown Jupyter Lab
+9. Shutdown Jupyter Lab
    
     From the file menu select ```Shutdown``` to terminate the process.
    
