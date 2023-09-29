@@ -1,6 +1,6 @@
 # neo4j-ipycytoscape
 
-This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in Jupyter Lab. It also demonstrated how to setup a local instance of the Neo4j graph database.
+This repo demonstrates how to use the [ipycytoscape widget](https://github.com/QuantStack/ipycytoscape) to visualize a Neo4j subgraph with cytoscape.js in Jupyter Lab. It also demonstrates how to setup a local instance of the Neo4j graph database and launch Neo4j Browser from a Notebook.
 
 Example subgraph rendered in Jupyter Notebook.
 <p align="center">
