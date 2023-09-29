@@ -4,7 +4,7 @@ This repo demonstrates how to use the [ipycytoscape widget](https://github.com/Q
 
 Example subgraph rendered in Jupyter Notebook.
 <p align="center">
-<img src="docs/Example1.png", width="90%">
+<img src="docs/Example1.png">
 </p>
 
 Colors and styles of nodes and relationships can be changed. By clicking on a node, a tooltip with the node properties is displayed. The layout can also be manually changed by dragging nodes to new positions. 
