@@ -1,8 +1,0 @@
-#!/bin/bash
-set -eux
-#export NEO4J_HOME=/tmp/neo4j-community-4.2.0
-export NEO4J_HOME=$(pwd)/neo4j-community-4.4.9
-
-$NEO4J_HOME/bin/neo4j stop
-
-exec "$@"
