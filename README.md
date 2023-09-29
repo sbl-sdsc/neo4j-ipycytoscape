@@ -58,20 +58,10 @@ conda deactivate
 ------
 
 
-## Run Jupyter Lab in your web browser using [Pangeo Binder](https://aws-uswest2-binder.pangeo.io/)
-
-**NOTE:** Authentication is required to launch binder! Sign into GitHub from your browser, then click on the `launch binder` badge below to launch Jupyter Lab.
-
-[![Binder](https://aws-uswest2-binder.pangeo.io/badge_logo.svg)](https://aws-uswest2-binder.pangeo.io/v2/gh/sbl-sdsc/neo4j-ipycytoscape/master)
-
-**Pangeo Binder is unsupported and may not always be available or slow. Launching Jupyter Lab may take a few minutes.**
-
-
-## Run Jupyter Lab on SDSC Expanse
+## Run Jupyter Lab on SDSC [Expanse](https://www.sdsc.edu/support/user_guides/expanse.html)
 ------
 Prerequisites:
-* [XSEDE account](https://portal.xsede.org/my-xsede?p_p_id=58&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_58_struts_action=%2Flogin%2Fcreate_account)
-* [Expanse allocation](https://portal.xsede.org/documentation-overview)
+* [Expanse allocation](https://allocations.access-ci.org/prepare-requests-overview)
 * Append ```export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"``` to your ```.bashrc``` on Expanse and run ```source ./.bashrc```
 
 ------
