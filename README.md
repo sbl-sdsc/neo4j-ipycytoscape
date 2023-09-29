@@ -115,7 +115,7 @@ galyleo launch --account <account_number> --partition shared --cpus 1 --memory 8
 Peter W. Rose, David Valentine, Ilya Zaslavsky, COVID-19-Net: Integrating Health, Pathogen and Environmental Data into a Knowledge Graph for Case Tracking, Analysis, and Forecasting. Available online: https://github.com/covid-19-net/covid-19-community (2020).
 
 ## Funding
-The Neo4j graph visualization for ipycytoscape is in part supported by the National Science Foundation under Award Numbers:
+The Neo4j graph visualization for ipycytoscape was in part supported by the National Science Foundation under Award Numbers:
 
 **NSF Convergence Accelerator Phase I (RAISE):** Knowledge Open Network Queries for Research (KONQUER) ([1937136](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1937136))
 
