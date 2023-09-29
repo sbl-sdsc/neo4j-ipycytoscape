@@ -6,13 +6,13 @@ channels:
 
 dependencies:
   - python>=3.8
-  - jupyterlab=3
+  - jupyterlab=4
   - pandas
   - ipycytoscape
   - py2neo
   - monotonic
-  - openjdk>=11.0.15
+  - openjdk=17.0.8
 
 variables:
-  NEO4J_VERSION: neo4j-community-4.4.9
-  NEO4J_PASSWORD: demo
+  NEO4J_VERSION: neo4j-community-5.12.0
+  NEO4J_PASSWORD: neo4jdemo
