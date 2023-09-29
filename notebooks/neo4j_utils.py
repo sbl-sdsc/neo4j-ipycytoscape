@@ -23,9 +23,10 @@ def unzip(filename):
     with zipfile.ZipFile(filename,"r") as zf:
         zf.extractall()
 
+
 def download_neo4j():
-    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
-    password = os.getenv("NEO4J_PASSWORD", default="demo")
+    version = os.getenv("NEO4J_VERSION")
+    password = os.getenv("NEO4J_PASSWORD")
     
     if not os.path.isdir(version):
         if platform.system() == "Windows":
@@ -45,14 +46,14 @@ def download_neo4j():
         if os.path.exists(filename):
             os.remove(filename)
 
-        subprocess.run([neo4j_admin, "set-initial-password", password])
-        
+        subprocess.run([neo4j_admin, "dbms", "set-initial-password", password])
+                
         if platform.system() == "Windows":
             neo4j = os.path.join(version, "bin", "neo4j.bat")
             subprocess.run([neo4j, "install-service"])
     
 def start():
-    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
+    version = os.getenv("NEO4J_VERSION")
     
     if not os.path.isdir(version):
         download_neo4j()
@@ -67,7 +68,7 @@ def start():
     check_status()
     
 def stop():
-    version = os.getenv("NEO4J_VERSION", default="neo4j-community-4.4.9")
+    version = os.getenv("NEO4J_VERSION")
     
     if platform.system() == "Windows":
         neo4j = os.path.join(version, "bin", "neo4j.bat")
